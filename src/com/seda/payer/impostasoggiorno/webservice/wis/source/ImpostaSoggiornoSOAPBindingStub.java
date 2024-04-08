@@ -1603,7 +1603,13 @@ public class ImpostaSoggiornoSOAPBindingStub extends org.apache.axis.client.Stub
    }
   throw axisFaultException;
 }
-    }
+ finally {
+		System.out.println("saveAnagraficaToHost - requestXML: " + _call.getMessageContext().getRequestMessage().getSOAPPartAsString());
+	    System.out.println("saveAnagraficaToHost - responseXML: " + _call.getMessageContext().getResponseMessage().getSOAPPartAsString());
+		//20190129 CT - fine
+	  }  
+ }
+ 
 
     public com.seda.payer.impostasoggiorno.webservice.wis.dati.RecuperaListaTipologieStruttureResponse recuperaListaTipologieStrutture(com.seda.payer.impostasoggiorno.webservice.wis.dati.RecuperaListaTipologieStruttureRequest in) throws java.rmi.RemoteException, com.seda.payer.impostasoggiorno.webservice.srv.FaultType {
         if (super.cachedEndpoint == null) {
@@ -1897,7 +1903,12 @@ public class ImpostaSoggiornoSOAPBindingStub extends org.apache.axis.client.Stub
    }
   throw axisFaultException;
 }
-    }
+ finally {
+		System.out.println("verificaAbilitazioneRIDHost - requestXML: " + _call.getMessageContext().getRequestMessage().getSOAPPartAsString());
+	    System.out.println("verificaAbilitazioneRIDHost - responseXML: " + _call.getMessageContext().getResponseMessage().getSOAPPartAsString());
+		//20190129 CT - fine
+	  }  
+}
 
     public com.seda.payer.impostasoggiorno.webservice.wis.dati.RecuperaDettaglioComunicazioneAggregatoResponse recuperaDettaglioComunicazioneAggregato(com.seda.payer.impostasoggiorno.webservice.wis.dati.RecuperaDettaglioComunicazioneAggregatoRequest in) throws java.rmi.RemoteException, com.seda.payer.impostasoggiorno.webservice.srv.FaultType {
         if (super.cachedEndpoint == null) {
@@ -2023,7 +2034,13 @@ public class ImpostaSoggiornoSOAPBindingStub extends org.apache.axis.client.Stub
    }
   throw axisFaultException;
 }
-    }
+ finally {
+		System.out.println("saveComunicazioneToHost - requestXML: " + _call.getMessageContext().getRequestMessage().getSOAPPartAsString());
+	    System.out.println("saveComunicazioneToHost - responseXML: " + _call.getMessageContext().getResponseMessage().getSOAPPartAsString());
+		//20190129 CT - fine
+	  }  
+}
+
 
     public com.seda.payer.impostasoggiorno.webservice.wis.dati.InserisciCompilazioneDiarioResponse inserisciCompilazioneDiario(com.seda.payer.impostasoggiorno.webservice.wis.dati.InserisciCompilazioneDiarioRequest in) throws java.rmi.RemoteException, com.seda.payer.impostasoggiorno.webservice.srv.FaultType {
         if (super.cachedEndpoint == null) {
