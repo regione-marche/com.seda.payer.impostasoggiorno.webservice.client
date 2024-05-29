@@ -7,6 +7,8 @@
 
 package com.seda.payer.impostasoggiorno.webservice.dati;
 
+import java.util.Objects;
+
 public class TestataComunicazioneImpostaSoggiorno  implements java.io.Serializable {
     private java.lang.String chiaveTestataComunicazione;
 
@@ -110,6 +112,8 @@ public class TestataComunicazioneImpostaSoggiorno  implements java.io.Serializab
     private java.lang.String codiceIUVCumulativo;
     //fine LP PG200230
 
+    private java.lang.String operatoreInviaComunicazione;
+
     public TestataComunicazioneImpostaSoggiorno() {
     }
 
@@ -161,7 +165,8 @@ public class TestataComunicazioneImpostaSoggiorno  implements java.io.Serializab
            java.util.Date dataLimiteComunicazione,
            java.lang.String chiaveAnagraficaStrutturaRicettivaPrincipale,
            java.lang.String numeroBollettinoCumulativo,
-           java.lang.String noteOperatore) {
+           java.lang.String noteOperatore,
+           java.lang.String operatoreInviaComunicazione) {
            this.chiaveTestataComunicazione = chiaveTestataComunicazione;
            this.chiaveAnagraficaStrutturaRicettiva = chiaveAnagraficaStrutturaRicettiva;
            this.codiceSocieta = codiceSocieta;
@@ -206,6 +211,7 @@ public class TestataComunicazioneImpostaSoggiorno  implements java.io.Serializab
            this.chiaveAnagraficaStrutturaRicettivaPrincipale = chiaveAnagraficaStrutturaRicettivaPrincipale;
            this.numeroBollettinoCumulativo = numeroBollettinoCumulativo;
            this.noteOperatore = noteOperatore;
+           this.operatoreInviaComunicazione = operatoreInviaComunicazione;
     }
 
 
@@ -1168,326 +1174,30 @@ public class TestataComunicazioneImpostaSoggiorno  implements java.io.Serializab
     }
     //fine LP PG200230
 
+    public String getOperatoreInviaComunicazione() {
+        return operatoreInviaComunicazione;
+    }
+
+    public void setOperatoreInviaComunicazione(String operatoreInviaComunicazione) {
+        this.operatoreInviaComunicazione = operatoreInviaComunicazione;
+    }
+
     private java.lang.Object __equalsCalc = null;
-    public synchronized boolean equals(java.lang.Object obj) {
-        if (!(obj instanceof TestataComunicazioneImpostaSoggiorno)) return false;
-        TestataComunicazioneImpostaSoggiorno other = (TestataComunicazioneImpostaSoggiorno) obj;
-        if (obj == null) return false;
-        if (this == obj) return true;
-        if (__equalsCalc != null) {
-            return (__equalsCalc == obj);
-        }
-        __equalsCalc = obj;
-        boolean _equals;
-        _equals = true && 
-            ((this.chiaveTestataComunicazione==null && other.getChiaveTestataComunicazione()==null) || 
-             (this.chiaveTestataComunicazione!=null &&
-              this.chiaveTestataComunicazione.equals(other.getChiaveTestataComunicazione()))) &&
-            ((this.chiaveAnagraficaStrutturaRicettiva==null && other.getChiaveAnagraficaStrutturaRicettiva()==null) || 
-             (this.chiaveAnagraficaStrutturaRicettiva!=null &&
-              this.chiaveAnagraficaStrutturaRicettiva.equals(other.getChiaveAnagraficaStrutturaRicettiva()))) &&
-            ((this.codiceSocieta==null && other.getCodiceSocieta()==null) || 
-             (this.codiceSocieta!=null &&
-              this.codiceSocieta.equals(other.getCodiceSocieta()))) &&
-            ((this.codiceUtente==null && other.getCodiceUtente()==null) || 
-             (this.codiceUtente!=null &&
-              this.codiceUtente.equals(other.getCodiceUtente()))) &&
-            ((this.chiaveEnte==null && other.getChiaveEnte()==null) || 
-             (this.chiaveEnte!=null &&
-              this.chiaveEnte.equals(other.getChiaveEnte()))) &&
-            ((this.dataInserimentoComunicazione==null && other.getDataInserimentoComunicazione()==null) || 
-             (this.dataInserimentoComunicazione!=null &&
-              this.dataInserimentoComunicazione.equals(other.getDataInserimentoComunicazione()))) &&
-            ((this.dataInizioComunicazione==null && other.getDataInizioComunicazione()==null) || 
-             (this.dataInizioComunicazione!=null &&
-              this.dataInizioComunicazione.equals(other.getDataInizioComunicazione()))) &&
-            ((this.dataFineComunicazione==null && other.getDataFineComunicazione()==null) || 
-             (this.dataFineComunicazione!=null &&
-              this.dataFineComunicazione.equals(other.getDataFineComunicazione()))) &&
-            ((this.numeroGiorniPeriodoPermanenzaTotale==null && other.getNumeroGiorniPeriodoPermanenzaTotale()==null) || 
-             (this.numeroGiorniPeriodoPermanenzaTotale!=null &&
-              this.numeroGiorniPeriodoPermanenzaTotale.equals(other.getNumeroGiorniPeriodoPermanenzaTotale()))) &&
-            ((this.tipoComunicazione==null && other.getTipoComunicazione()==null) || 
-             (this.tipoComunicazione!=null &&
-              this.tipoComunicazione.equals(other.getTipoComunicazione()))) &&
-            ((this.chiaveTariffaImpostaSoggiorno==null && other.getChiaveTariffaImpostaSoggiorno()==null) || 
-             (this.chiaveTariffaImpostaSoggiorno!=null &&
-              this.chiaveTariffaImpostaSoggiorno.equals(other.getChiaveTariffaImpostaSoggiorno()))) &&
-            ((this.noteAggiuntive==null && other.getNoteAggiuntive()==null) || 
-             (this.noteAggiuntive!=null &&
-              this.noteAggiuntive.equals(other.getNoteAggiuntive()))) &&
-            ((this.dataScadenzaComunicazione==null && other.getDataScadenzaComunicazione()==null) || 
-             (this.dataScadenzaComunicazione!=null &&
-              this.dataScadenzaComunicazione.equals(other.getDataScadenzaComunicazione()))) &&
-            ((this.statoComunicazione==null && other.getStatoComunicazione()==null) || 
-             (this.statoComunicazione!=null &&
-              this.statoComunicazione.equals(other.getStatoComunicazione()))) &&
-            ((this.modalitaPagamento==null && other.getModalitaPagamento()==null) || 
-             (this.modalitaPagamento!=null &&
-              this.modalitaPagamento.equals(other.getModalitaPagamento()))) &&
-            ((this.codiceRID==null && other.getCodiceRID()==null) || 
-             (this.codiceRID!=null &&
-              this.codiceRID.equals(other.getCodiceRID()))) &&
-            ((this.numeroDocumentoGestionaleEntrate==null && other.getNumeroDocumentoGestionaleEntrate()==null) || 
-             (this.numeroDocumentoGestionaleEntrate!=null &&
-              this.numeroDocumentoGestionaleEntrate.equals(other.getNumeroDocumentoGestionaleEntrate()))) &&
-            ((this.codiceBollettino==null && other.getCodiceBollettino()==null) || 
-             (this.codiceBollettino!=null &&
-              this.codiceBollettino.equals(other.getCodiceBollettino()))) &&
-            ((this.statoDocumento==null && other.getStatoDocumento()==null) || 
-             (this.statoDocumento!=null &&
-              this.statoDocumento.equals(other.getStatoDocumento()))) &&
-            ((this.dataPagamento==null && other.getDataPagamento()==null) || 
-             (this.dataPagamento!=null &&
-              this.dataPagamento.equals(other.getDataPagamento()))) &&
-            ((this.usernameUtenteUltimoAggiornamento==null && other.getUsernameUtenteUltimoAggiornamento()==null) || 
-             (this.usernameUtenteUltimoAggiornamento!=null &&
-              this.usernameUtenteUltimoAggiornamento.equals(other.getUsernameUtenteUltimoAggiornamento()))) &&
-            ((this.dataUltimoAggiornamento==null && other.getDataUltimoAggiornamento()==null) || 
-             (this.dataUltimoAggiornamento!=null &&
-              this.dataUltimoAggiornamento.equals(other.getDataUltimoAggiornamento()))) &&
-            ((this.operatoreUltimoAggiornamento==null && other.getOperatoreUltimoAggiornamento()==null) || 
-             (this.operatoreUltimoAggiornamento!=null &&
-              this.operatoreUltimoAggiornamento.equals(other.getOperatoreUltimoAggiornamento()))) &&
-            ((this.dataConfermaComunicazione==null && other.getDataConfermaComunicazione()==null) || 
-             (this.dataConfermaComunicazione!=null &&
-              this.dataConfermaComunicazione.equals(other.getDataConfermaComunicazione()))) &&
-            ((this.codiceFreccia==null && other.getCodiceFreccia()==null) || 
-             (this.codiceFreccia!=null &&
-              this.codiceFreccia.equals(other.getCodiceFreccia()))) &&
-            ((this.descrizioneEnte==null && other.getDescrizioneEnte()==null) || 
-             (this.descrizioneEnte!=null &&
-              this.descrizioneEnte.equals(other.getDescrizioneEnte()))) &&
-            ((this.tipoCC==null && other.getTipoCC()==null) || 
-             (this.tipoCC!=null &&
-              this.tipoCC.equals(other.getTipoCC()))) &&
-            ((this.numeroCC==null && other.getNumeroCC()==null) || 
-             (this.numeroCC!=null &&
-              this.numeroCC.equals(other.getNumeroCC()))) &&
-            ((this.intestazioneCC==null && other.getIntestazioneCC()==null) || 
-             (this.intestazioneCC!=null &&
-              this.intestazioneCC.equals(other.getIntestazioneCC()))) &&
-            ((this.autorizzazioneCC==null && other.getAutorizzazioneCC()==null) || 
-             (this.autorizzazioneCC!=null &&
-              this.autorizzazioneCC.equals(other.getAutorizzazioneCC()))) &&
-            ((this.codiceFiscaleEnte==null && other.getCodiceFiscaleEnte()==null) || 
-             (this.codiceFiscaleEnte!=null &&
-              this.codiceFiscaleEnte.equals(other.getCodiceFiscaleEnte()))) &&
-            ((this.codiceCBill==null && other.getCodiceCBill()==null) || 
-             (this.codiceCBill!=null &&
-              this.codiceCBill.equals(other.getCodiceCBill()))) &&
-            ((this.barcodePagoPA==null && other.getBarcodePagoPA()==null) || 
-             (this.barcodePagoPA!=null &&
-              this.barcodePagoPA.equals(other.getBarcodePagoPA()))) &&
-            ((this.qrCodePagoPA==null && other.getQrCodePagoPA()==null) || 
-             (this.qrCodePagoPA!=null &&
-              this.qrCodePagoPA.equals(other.getQrCodePagoPA()))) &&
-            ((this.causaleDocumento==null && other.getCausaleDocumento()==null) || 
-             (this.causaleDocumento!=null &&
-              this.causaleDocumento.equals(other.getCausaleDocumento()))) &&
-            ((this.descrizioneUfficio==null && other.getDescrizioneUfficio()==null) || 
-             (this.descrizioneUfficio!=null &&
-              this.descrizioneUfficio.equals(other.getDescrizioneUfficio()))) &&
-            ((this.descrizioneTipoServizio==null && other.getDescrizioneTipoServizio()==null) || 
-             (this.descrizioneTipoServizio!=null &&
-              this.descrizioneTipoServizio.equals(other.getDescrizioneTipoServizio()))) &&
-            ((this.descrizioneImpostaServizio==null && other.getDescrizioneImpostaServizio()==null) || 
-             (this.descrizioneImpostaServizio!=null &&
-              this.descrizioneImpostaServizio.equals(other.getDescrizioneImpostaServizio()))) &&
-            ((this.numeroAvvisoPagoPA==null && other.getNumeroAvvisoPagoPA()==null) || 
-             (this.numeroAvvisoPagoPA!=null &&
-              this.numeroAvvisoPagoPA.equals(other.getNumeroAvvisoPagoPA()))) &&
-            ((this.codiceIUV==null && other.getCodiceIUV()==null) || 
-             (this.codiceIUV!=null &&
-              this.codiceIUV.equals(other.getCodiceIUV()))) &&
-            //PG190300 - inizio  
-            ((this.dataLimiteComunicazione==null && other.getDataLimiteComunicazione()==null) || 
-             (this.dataLimiteComunicazione!=null &&
-              this.dataLimiteComunicazione.equals(other.getDataLimiteComunicazione()))) &&
-            ((this.chiaveAnagraficaStrutturaRicettivaPrincipale==null && other.getChiaveAnagraficaStrutturaRicettivaPrincipale()==null) || 
-             (this.chiaveAnagraficaStrutturaRicettivaPrincipale!=null &&
-              this.chiaveAnagraficaStrutturaRicettivaPrincipale.equals(other.getChiaveAnagraficaStrutturaRicettivaPrincipale()))) &&
-            ((this.numeroBollettinoCumulativo==null && other.getNumeroBollettinoCumulativo()==null) || 
-             (this.numeroBollettinoCumulativo!=null &&
-              this.numeroBollettinoCumulativo.equals(other.getNumeroBollettinoCumulativo()))) &&
-            ((this.noteOperatore==null && other.getNoteOperatore()==null) || 
-             (this.noteOperatore!=null &&
-              this.noteOperatore.equals(other.getNoteOperatore()))) &&
-            //inizio LP PG200230
-            ((this.barcodePagoPACumulativo==null && other.getBarcodePagoPACumulativo()==null) || 
-             (this.barcodePagoPACumulativo!=null &&
-              this.barcodePagoPACumulativo.equals(other.getBarcodePagoPACumulativo()))) &&
-            ((this.qrCodePagoPACumulativo==null && other.getQrCodePagoPACumulativo()==null) || 
-             (this.qrCodePagoPACumulativo!=null &&
-              this.qrCodePagoPACumulativo.equals(other.getQrCodePagoPACumulativo()))) &&
-            ((this.numeroAvvisoPagoPACumulativo==null && other.getNumeroAvvisoPagoPACumulativo()==null) || 
-             (this.numeroAvvisoPagoPACumulativo!=null &&
-              this.numeroAvvisoPagoPACumulativo.equals(other.getNumeroAvvisoPagoPACumulativo()))) &&
-            ((this.codiceIUVCumulativo==null && other.getCodiceIUVCumulativo()==null) || 
-             (this.codiceIUVCumulativo!=null &&
-              this.codiceIUVCumulativo.equals(other.getCodiceIUVCumulativo())));
-        	//fine LP PG200230
-        __equalsCalc = null;
-        return _equals;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TestataComunicazioneImpostaSoggiorno that = (TestataComunicazioneImpostaSoggiorno) o;
+        return __hashCodeCalc == that.__hashCodeCalc && Objects.equals(chiaveTestataComunicazione, that.chiaveTestataComunicazione) && Objects.equals(chiaveAnagraficaStrutturaRicettiva, that.chiaveAnagraficaStrutturaRicettiva) && Objects.equals(codiceSocieta, that.codiceSocieta) && Objects.equals(codiceUtente, that.codiceUtente) && Objects.equals(chiaveEnte, that.chiaveEnte) && Objects.equals(dataInserimentoComunicazione, that.dataInserimentoComunicazione) && Objects.equals(dataInizioComunicazione, that.dataInizioComunicazione) && Objects.equals(dataFineComunicazione, that.dataFineComunicazione) && Objects.equals(numeroGiorniPeriodoPermanenzaTotale, that.numeroGiorniPeriodoPermanenzaTotale) && Objects.equals(tipoComunicazione, that.tipoComunicazione) && Objects.equals(chiaveTariffaImpostaSoggiorno, that.chiaveTariffaImpostaSoggiorno) && Objects.equals(noteAggiuntive, that.noteAggiuntive) && Objects.equals(dataScadenzaComunicazione, that.dataScadenzaComunicazione) && Objects.equals(statoComunicazione, that.statoComunicazione) && Objects.equals(modalitaPagamento, that.modalitaPagamento) && Objects.equals(codiceRID, that.codiceRID) && Objects.equals(numeroDocumentoGestionaleEntrate, that.numeroDocumentoGestionaleEntrate) && Objects.equals(codiceBollettino, that.codiceBollettino) && Objects.equals(statoDocumento, that.statoDocumento) && Objects.equals(dataPagamento, that.dataPagamento) && Objects.equals(usernameUtenteUltimoAggiornamento, that.usernameUtenteUltimoAggiornamento) && Objects.equals(dataUltimoAggiornamento, that.dataUltimoAggiornamento) && Objects.equals(operatoreUltimoAggiornamento, that.operatoreUltimoAggiornamento) && Objects.equals(dataConfermaComunicazione, that.dataConfermaComunicazione) && Objects.equals(codiceFreccia, that.codiceFreccia) && Objects.equals(descrizioneEnte, that.descrizioneEnte) && Objects.equals(tipoCC, that.tipoCC) && Objects.equals(numeroCC, that.numeroCC) && Objects.equals(intestazioneCC, that.intestazioneCC) && Objects.equals(autorizzazioneCC, that.autorizzazioneCC) && Objects.equals(codiceFiscaleEnte, that.codiceFiscaleEnte) && Objects.equals(codiceCBill, that.codiceCBill) && Objects.equals(barcodePagoPA, that.barcodePagoPA) && Objects.equals(qrCodePagoPA, that.qrCodePagoPA) && Objects.equals(causaleDocumento, that.causaleDocumento) && Objects.equals(descrizioneUfficio, that.descrizioneUfficio) && Objects.equals(descrizioneTipoServizio, that.descrizioneTipoServizio) && Objects.equals(descrizioneImpostaServizio, that.descrizioneImpostaServizio) && Objects.equals(numeroAvvisoPagoPA, that.numeroAvvisoPagoPA) && Objects.equals(codiceIUV, that.codiceIUV) && Objects.equals(dataLimiteComunicazione, that.dataLimiteComunicazione) && Objects.equals(chiaveAnagraficaStrutturaRicettivaPrincipale, that.chiaveAnagraficaStrutturaRicettivaPrincipale) && Objects.equals(numeroBollettinoCumulativo, that.numeroBollettinoCumulativo) && Objects.equals(noteOperatore, that.noteOperatore) && Objects.equals(barcodePagoPACumulativo, that.barcodePagoPACumulativo) && Objects.equals(qrCodePagoPACumulativo, that.qrCodePagoPACumulativo) && Objects.equals(numeroAvvisoPagoPACumulativo, that.numeroAvvisoPagoPACumulativo) && Objects.equals(codiceIUVCumulativo, that.codiceIUVCumulativo) && Objects.equals(operatoreInviaComunicazione, that.operatoreInviaComunicazione) && Objects.equals(__equalsCalc, that.__equalsCalc);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(chiaveTestataComunicazione, chiaveAnagraficaStrutturaRicettiva, codiceSocieta, codiceUtente, chiaveEnte, dataInserimentoComunicazione, dataInizioComunicazione, dataFineComunicazione, numeroGiorniPeriodoPermanenzaTotale, tipoComunicazione, chiaveTariffaImpostaSoggiorno, noteAggiuntive, dataScadenzaComunicazione, statoComunicazione, modalitaPagamento, codiceRID, numeroDocumentoGestionaleEntrate, codiceBollettino, statoDocumento, dataPagamento, usernameUtenteUltimoAggiornamento, dataUltimoAggiornamento, operatoreUltimoAggiornamento, dataConfermaComunicazione, codiceFreccia, descrizioneEnte, tipoCC, numeroCC, intestazioneCC, autorizzazioneCC, codiceFiscaleEnte, codiceCBill, barcodePagoPA, qrCodePagoPA, causaleDocumento, descrizioneUfficio, descrizioneTipoServizio, descrizioneImpostaServizio, numeroAvvisoPagoPA, codiceIUV, dataLimiteComunicazione, chiaveAnagraficaStrutturaRicettivaPrincipale, numeroBollettinoCumulativo, noteOperatore, barcodePagoPACumulativo, qrCodePagoPACumulativo, numeroAvvisoPagoPACumulativo, codiceIUVCumulativo, operatoreInviaComunicazione, __equalsCalc, __hashCodeCalc);
     }
 
     private boolean __hashCodeCalc = false;
-    public synchronized int hashCode() {
-        if (__hashCodeCalc) {
-            return 0;
-        }
-        __hashCodeCalc = true;
-        int _hashCode = 1;
-        if (getChiaveTestataComunicazione() != null) {
-            _hashCode += getChiaveTestataComunicazione().hashCode();
-        }
-        if (getChiaveAnagraficaStrutturaRicettiva() != null) {
-            _hashCode += getChiaveAnagraficaStrutturaRicettiva().hashCode();
-        }
-        if (getCodiceSocieta() != null) {
-            _hashCode += getCodiceSocieta().hashCode();
-        }
-        if (getCodiceUtente() != null) {
-            _hashCode += getCodiceUtente().hashCode();
-        }
-        if (getChiaveEnte() != null) {
-            _hashCode += getChiaveEnte().hashCode();
-        }
-        if (getDataInserimentoComunicazione() != null) {
-            _hashCode += getDataInserimentoComunicazione().hashCode();
-        }
-        if (getDataInizioComunicazione() != null) {
-            _hashCode += getDataInizioComunicazione().hashCode();
-        }
-        if (getDataFineComunicazione() != null) {
-            _hashCode += getDataFineComunicazione().hashCode();
-        }
-        if (getNumeroGiorniPeriodoPermanenzaTotale() != null) {
-            _hashCode += getNumeroGiorniPeriodoPermanenzaTotale().hashCode();
-        }
-        if (getTipoComunicazione() != null) {
-            _hashCode += getTipoComunicazione().hashCode();
-        }
-        if (getChiaveTariffaImpostaSoggiorno() != null) {
-            _hashCode += getChiaveTariffaImpostaSoggiorno().hashCode();
-        }
-        if (getNoteAggiuntive() != null) {
-            _hashCode += getNoteAggiuntive().hashCode();
-        }
-        if (getDataScadenzaComunicazione() != null) {
-            _hashCode += getDataScadenzaComunicazione().hashCode();
-        }
-        if (getStatoComunicazione() != null) {
-            _hashCode += getStatoComunicazione().hashCode();
-        }
-        if (getModalitaPagamento() != null) {
-            _hashCode += getModalitaPagamento().hashCode();
-        }
-        if (getCodiceRID() != null) {
-            _hashCode += getCodiceRID().hashCode();
-        }
-        if (getNumeroDocumentoGestionaleEntrate() != null) {
-            _hashCode += getNumeroDocumentoGestionaleEntrate().hashCode();
-        }
-        if (getCodiceBollettino() != null) {
-            _hashCode += getCodiceBollettino().hashCode();
-        }
-        if (getStatoDocumento() != null) {
-            _hashCode += getStatoDocumento().hashCode();
-        }
-        if (getDataPagamento() != null) {
-            _hashCode += getDataPagamento().hashCode();
-        }
-        if (getUsernameUtenteUltimoAggiornamento() != null) {
-            _hashCode += getUsernameUtenteUltimoAggiornamento().hashCode();
-        }
-        if (getDataUltimoAggiornamento() != null) {
-            _hashCode += getDataUltimoAggiornamento().hashCode();
-        }
-        if (getOperatoreUltimoAggiornamento() != null) {
-            _hashCode += getOperatoreUltimoAggiornamento().hashCode();
-        }
-        if (getDataConfermaComunicazione() != null) {
-            _hashCode += getDataConfermaComunicazione().hashCode();
-        }
-        if (getCodiceFreccia() != null) {
-            _hashCode += getCodiceFreccia().hashCode();
-        }
-        if (getDescrizioneEnte() != null) {
-            _hashCode += getDescrizioneEnte().hashCode();
-        }
-        if (getTipoCC() != null) {
-            _hashCode += getTipoCC().hashCode();
-        }
-        if (getNumeroCC() != null) {
-            _hashCode += getNumeroCC().hashCode();
-        }
-        if (getIntestazioneCC() != null) {
-            _hashCode += getIntestazioneCC().hashCode();
-        }
-        if (getAutorizzazioneCC() != null) {
-            _hashCode += getAutorizzazioneCC().hashCode();
-        }
-        if (getCodiceFiscaleEnte() != null) {
-            _hashCode += getCodiceFiscaleEnte().hashCode();
-        }
-        if (getCodiceCBill() != null) {
-            _hashCode += getCodiceCBill().hashCode();
-        }
-        if (getBarcodePagoPA() != null) {
-            _hashCode += getBarcodePagoPA().hashCode();
-        }
-        if (getQrCodePagoPA() != null) {
-            _hashCode += getQrCodePagoPA().hashCode();
-        }
-        if (getCausaleDocumento() != null) {
-            _hashCode += getCausaleDocumento().hashCode();
-        }
-        if (getDescrizioneUfficio() != null) {
-            _hashCode += getDescrizioneUfficio().hashCode();
-        }
-        if (getDescrizioneTipoServizio() != null) {
-            _hashCode += getDescrizioneTipoServizio().hashCode();
-        }
-        if (getDescrizioneImpostaServizio() != null) {
-            _hashCode += getDescrizioneImpostaServizio().hashCode();
-        }
-        if (getNumeroAvvisoPagoPA() != null) {
-            _hashCode += getNumeroAvvisoPagoPA().hashCode();
-        }
-        if (getCodiceIUV() != null) {
-            _hashCode += getCodiceIUV().hashCode();
-        }
-        //PG190300 - inizio
-        if (getDataLimiteComunicazione() != null) {
-            _hashCode += getDataLimiteComunicazione().hashCode();
-        }
-        if (getChiaveAnagraficaStrutturaRicettivaPrincipale() != null) {
-            _hashCode += getChiaveAnagraficaStrutturaRicettivaPrincipale().hashCode();
-        }
-        if (getNumeroBollettinoCumulativo() != null) {
-            _hashCode += getNumeroBollettinoCumulativo().hashCode();
-        }
-        if (getNoteOperatore() != null) {
-            _hashCode += getNoteOperatore().hashCode();
-        }
-        //inizio LP PG200230
-        if (getBarcodePagoPACumulativo() != null) {
-            _hashCode += getBarcodePagoPACumulativo().hashCode();
-        }
-        if (getQrCodePagoPACumulativo() != null) {
-            _hashCode += getQrCodePagoPACumulativo().hashCode();
-        }
-        if (getNumeroAvvisoPagoPACumulativo() != null) {
-            _hashCode += getNumeroAvvisoPagoPACumulativo().hashCode();
-        }
-        if (getCodiceIUVCumulativo() != null) {
-            _hashCode += getCodiceIUVCumulativo().hashCode();
-        }
-        //fine LP PG200230
-        __hashCodeCalc = false;
-        return _hashCode;
-    }
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
